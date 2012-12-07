@@ -15,12 +15,41 @@
  body {
   background: #E9F1DF;
  }
+
  header {
-  width: 200px;
   background: #4AD9D9;
  }
 
+
+
  footer {
-  width: 200px;
   background: #4AD9D9;
+  height: 100px;
  }
+
+ footer img {
+    width: 200px;
+    padding: 15px;
+    float: right;
+ }
+
+ #main {
+  height: 600px;
+ }
+
+ #booth {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  padding: 20px 0;
+ }
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
