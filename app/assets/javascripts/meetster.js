@@ -1,7 +1,7 @@
 $(function() {
   $('#booth').photobooth().on("image",sendPhoto);
   $('form').submit(takePhoto);
-  //The below is to stop people from messing with their photos.
+  //The below is to stop people from messing with their photos or submitting them without the form.
   $('#booth ul').hide();
 });
 
