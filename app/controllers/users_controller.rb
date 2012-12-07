@@ -12,14 +12,17 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.event_id = Event.last.id
     if @user.save
-      flash[:notice] = "You've been added. Have a good time!"
-      render :json => User.fresh
+      render :json => {"flash": "You've been added. Have a good time!"}
     end
   end
 
   def destroy
     user = User.find(params[:id])
     user.delete
+  end
+
+  def data
+    render :json => User.fresh
   end
 
 end

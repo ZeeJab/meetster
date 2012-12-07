@@ -7,6 +7,7 @@ Meetster::Application.routes.draw do
   match '/new_event' => 'events#new', :via => :get
   match '/new_event' => 'events#create', :via => :post
   match '/events' => 'events#show', :via => :get
+  match '/data' => 'events#data', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

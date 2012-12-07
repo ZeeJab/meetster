@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require 'photobooth.js'
 //= require 'meetster.js'
+//= require 'display_users.js'
