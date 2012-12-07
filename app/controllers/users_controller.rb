@@ -11,15 +11,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      render :json => User.fresh
       flash[:notice] = "You've been added. Have a good time!"
-      redirect_to new_user_path
+      render :json => User.fresh
     else
       render :new
     end
-
   end
-
 
   def destroy
     user = User.find(params[:id])
