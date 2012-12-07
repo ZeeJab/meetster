@@ -55,6 +55,29 @@
   margin: auto;
  }
 
+
+input[type="submit"]{
+  padding:10px 30px;
+  background-color: #4AD9D9;
+  border-bottom: 4px solid #35B1BF;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-weight: 800;
+  font-size:14px;
+  font-family: sans-serif;
+  color: #fff;
+  margin-top:12px;
+  border-radius: 2px;
+}
+
+input:hover {
+  background-color: $red;
+  border-bottom: 4px solid $dark-red;
+  color:#fff;
+}
+
+
 /* Clear fix hack */
 .clearfix:after {
      content: ".";
