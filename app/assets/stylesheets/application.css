@@ -97,11 +97,11 @@ input[type="submit"]{
   border-left: none;
   font-weight: 800;
   font-size:14px;
-  font-family: sans-serif;
+  font-family: 'Monda', sans-serif;
   color: #fff;
   margin-top:12px;
   border-radius: 2px;
-  margin-left: 120px;
+  margin-left: 106px;
 }
 
 .top {
