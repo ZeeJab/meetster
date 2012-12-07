@@ -14,7 +14,6 @@ function getUsers () {
   type: "GET",
   url: "/data"
   }).done(function( msg ) {
-    message = msg;
     showUsers(msg, 0);
   });
 }
@@ -24,21 +23,24 @@ function showUsers (data, i) {
     console.log("cleared");
     getUsers();
   }
-  var img = $('<img>').attr('src',data[i].photo) || "",
-      name = $('<h1>').text(data[i].name),
-      lookingFor = $('<h4>').text(data[i].looking_for),
-      description = $('<div>').addClass('description').text(data[i].description),
-      twitter = $('<div>').addClass('twitter').text(data[i].twitter),
+  console.log(data);
+
+  var imgSrc = data[i].photo || " ",
+      nameText = data[i].name || " ",
+      descriptionText = data[i].description || " ",
+      twitterText = data[i].twitter || " ";
+
+  var img = $('<img>').attr('src', imgSrc),
+      name = $('<h1>').text(nameText),
+      description = $('<h2>').addClass('description').text(descriptionText) || "",
+      twitter = $('<h2>').addClass('twitter').text("@" + twitterText) || "",
       currentUser = $('div.current-user');
+      $('.current-user div#image').empty().append(img);
+      $('.current-user div#info').empty().append(name).append(description).append(twitter);
 
-      currentUser.fadeOut();
-      currentUser.empty();
-      currentUser.prepend(lookingFor).prepend(twitter).prepend(description).prepend(name).prepend(img);
-      currentUser.fadeIn();
-
-  i++;
+  i++; //To cycle through.
 
   setTimeout(function() {
     showUsers(data, i);
-  }, 1000);
+  }, 4000);
 }

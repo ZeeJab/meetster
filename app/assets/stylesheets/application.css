@@ -140,7 +140,7 @@ label
   font-family: 'Monda', sans-serif;
 }
 
-.field 
+.field
   {
     margin-bottom: 10px;
   }
@@ -188,10 +188,16 @@ margin-bottom: 7px;
 }
 
 #image {
+  border: 4px #35B1BF dotted;
+  height: 200px;
+  overflow: hidden;
+  width: 200px;
   margin-top: 80px;
   margin-bottom: 40px;
   border-radius: 100%;
-  border: 4px #35B1BF dotted;
+}
+
+#image img {
   width: 200px;
   height: 200px;
 }

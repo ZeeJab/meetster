@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(:name => params[:name], :description => params[:description], :twitter => params[:twitter], :photo => params[:photo])
     @user.event_id = Event.last.id
     if @user.save
       render :json => {"flash" => "You've been added. Have a good time!"}
