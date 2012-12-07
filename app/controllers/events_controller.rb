@@ -11,8 +11,7 @@ class EventsController < ApplicationController
   def show
     event = Event.last
     @event_name = event.name
-    # @event_users = event.users
-
+    @event_users = event.users
   end
 
 end
