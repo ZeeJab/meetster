@@ -12,6 +12,9 @@
  *= require_tree .
  */
 
+ body {
+  background: #E9F1DF;
+ }
  header {
   width: 200px;
   background: #4AD9D9;
