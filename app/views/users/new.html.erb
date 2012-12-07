@@ -1,0 +1,17 @@
+<div id="user-login">
+
+  <%= form_for @user do |f| %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+
+
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+
+    <%= f.radio_button_tag 'looking to', 'Looking to hire' %>
+    <%= f.radio_button_tag 'looking_for', 'Looking to get hired' %>
+    <%= f.radio_button_tag 'looking_for', 'Looking for a Happy Time' %>
+
+    <%= f.submit "Let's do this!" %>
+  <% end %>
+</div>
