@@ -44,7 +44,7 @@
 
  #main {
     width: 960px;
-    height: 550px;
+    height: 650px;
     margin: auto;
  }
 
@@ -88,7 +88,11 @@ p {
   font-size: 2em;
 }
 
-input[type="submit"]{
+#current_user {
+  height: 750px;
+}
+
+button {
   padding:10px 30px;
   background-color: #F2385A;
   border-bottom: 4px solid #35B1BF;
@@ -112,7 +116,7 @@ input[type="submit"]{
   margin-left: 22px;
 }
 
-input:active {
+input[type="submit"]:active {
   background-color: #35B1BF;
   border-bottom: 4px solid #4AD9D9;
   color:#fff;
@@ -136,6 +140,7 @@ input:active {
 label
 {
   margin-bottom: -7px;
+  width: 100px;
   color: #35B1BF;
   font-family: 'Monda', sans-serif;
 }

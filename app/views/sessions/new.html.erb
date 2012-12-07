@@ -1,0 +1,79 @@
+<%= form_for @user, :remote => true do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field top">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div class="field top">
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+    </div>
+
+    <div class="field top">
+        <%= f.label :password_confirmation %>
+        <%= f.text_field :password_confirmation %>
+    </div>
+
+
+      <p> Enter your login name </p>
+      <%= f.text_field :login, :class => "text_box" %>
+      <p> Email ID</p>
+      <%= f.text_field :email, :class => "text_box" %>
+      <p> Password</p>
+      <%= f.password_field :password, :class => "text_box" %>
+      <p> Confirm your password</p>
+      <%= f.password_field :password_confirmation, :class => "text_box" %>
+      <div class="textalign_right">
+        <input type="submit"  value="Submit"  class="submit_button rounded_corner"/>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="login">
+  <div id="logo" class="clearfix"></div>
+  <div id="booth"></div>
+
+  <div id="user-login">
+
+    
+
+      <div class="field top">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= f.label :looking_for %>
+        <%= f.select(:looking_for, ["Looking to hire", "Looking to get hired", "Looking for a happy time"]) %>
+      </div>
+
+      <div class="field bottom">
+        <%= f.label :twitter %>
+        <span class="at">@</span><%= f.text_field :description %>
+      </div>
+
+      <div class="actions button">
+      <%= f.submit "Let's do this!" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -2,6 +2,7 @@ class SessionController < ApplicationController
   skip_before_filter :authenticate_user #Avoids a redirect loop if user isn't authenticated.
 
   def new
+    @user = User.new
   end
   def create
     user = User.find_by_username(params[:username])
