@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <strong>
+        <%= show_dynamic_links %>
+        <%= link_to "MY PROFILE", user_path(@authenticated_user) if @authenticated_user %>
+        <%= link_to "USERS", users_path if @authenticated_user %>
+        <%= link_to "NEW USER", new_user_path if !@authenticated_user %>
+        <%= link_to "NEW QUESTION", questions_path(@authenticated_user) if @authenticated_user %>
+        <%= link_to "MY MATCHES", match_show_path(@authenticated_user) if @authenticated_user %>
+        <%= link_to "MY INBOX", inbox_path(@authenticated_user)  if @authenticated_user %>
+      </strong>
 
 <%= yield %>
 
