@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   validates :looking_for, :presence => true
   validates :twitter 
 
+  belongs_to :event
+
 end
