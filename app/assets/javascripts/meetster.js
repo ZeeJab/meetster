@@ -2,10 +2,7 @@ $(function() {
   $('#booth').photobooth().on("image",sendPhoto);
   $('form').submit(takePhoto);
   //The below is to stop people from messing with their photos.
-  $('li.crop').hide();
-  $('li.brightness').hide();
-  $('li.saturation').hide();
-  $('li.hue').hide();
+  $('#booth ul').hide();
 });
 
 function takePhoto () {
@@ -21,6 +18,6 @@ function sendPhoto(event, dataURL) {
           looking_for: $('input#user_looking_for').val(),
           photo: dataURL }
   }).done(function( msg ) {
-
+    $('input[type="text"]').val('');
 });
 }

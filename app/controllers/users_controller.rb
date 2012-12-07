@@ -10,11 +10,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @user.event_id = Event.last.id
     if @user.save
       flash[:notice] = "You've been added. Have a good time!"
       render :json => User.fresh
-    else
-      render :new
     end
   end
 
