@@ -92,7 +92,7 @@ p {
   height: 750px;
 }
 
-form button {
+button {
   padding:10px 30px;
   background-color: #F2385A;
   border-bottom: 4px solid #35B1BF;
