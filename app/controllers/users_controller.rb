@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.event_id = Event.last.id
     if @user.save
-      render :json => {"flash": "You've been added. Have a good time!"}
+      render :json => {"flash" => "You've been added. Have a good time!"}
     end
   end
 
