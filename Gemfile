@@ -13,6 +13,7 @@ gem 'bcrypt-ruby'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'annotate'
+gem 'pry-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

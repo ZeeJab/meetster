@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    user_id = params[:id]
+    @user = User.find(user_id)
+  end
+
   def create
     @user = User.new(params[:user])
     @user.event_id = Event.last.id

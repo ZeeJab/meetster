@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meetster</title>
+  <title>Meet&amp;Greet</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header></header>
+  <header>
+  </header>
 
 <div id="main">
 <%= yield %>
 </div>
   
   <footer>
-    <div class="clearfix">
+    <div class=" footer clearfix">
+      <p>Designed &amp; Developed by || Dustin Coates :: Zahra Jabini</p>
       <%= link_to image_tag('ga-logo.png'), root_path %>
     </div>
   </footer>
