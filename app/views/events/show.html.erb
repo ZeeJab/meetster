@@ -1,3 +1,15 @@
 <h2><%= @event_name %></h2>
 <h3><%= @event_users_count %> people to meet.</h3>
-<div class="current-user"></div>
+<div class="current-user">
+  <div "show">
+    <div id="image">
+      <%= @user %>
+    </div>
+    <div id="info">
+      <h1> <%= @user.name %>  </h1> 
+      <h2> <%= @user.description %></h2>
+      <h2 id="looking_for"> <%= @user.looking_for %></h2>
+      <h2> @<%= @user.twitter %></h2>
+    </div>
+  </div>
+</div>

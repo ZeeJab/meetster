@@ -109,7 +109,7 @@ input[type="submit"]{
 }
 
 .bottom {
-  margin-left: 37px;
+  margin-left: 22px;
 }
 
 input:active {
@@ -126,14 +126,19 @@ input:active {
 .blind {
   padding: 30px;
 }
- 
 
-  label
-  {
-    margin-bottom: -7px;
-    color: #35B1BF;
-    font-family: 'Monda', sans-serif;
-  }
+.at{
+  color: #4AD9D9;
+  font-family: 'Monda', sans-serif;
+
+}
+
+label
+{
+  margin-bottom: -7px;
+  color: #35B1BF;
+  font-family: 'Monda', sans-serif;
+}
 
 .field 
   {
