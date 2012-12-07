@@ -24,6 +24,8 @@ function showUsers (data, i) {
       twitter = $('<div>').addClass('twitter').text(data[i].twitter),
       currentUser = $('div.current-user');
 
+      currentUser.fadeOut();
       currentUser.empty();
       currentUser.prepend(lookingFor).prepend(twitter).prepend(description).prepend(name).prepend(img);
+      currentUser.fadeIn();
 }
