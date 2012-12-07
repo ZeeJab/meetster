@@ -1,17 +1,38 @@
+<div id="booth"></div>
+
 <div id="user-login">
 
   <%= form_for @user do |f| %>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-
-    <%= f.radio_button_tag 'looking to', 'Looking to hire' %>
-    <%= f.radio_button_tag 'looking_for', 'Looking to get hired' %>
-    <%= f.radio_button_tag 'looking_for', 'Looking for a Happy Time' %>
-
-    <%= f.submit "Let's do this!" %>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
+
+    <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    </div>
+
+    <div class="field">
+    <%= f.label :looking_for %>
+    <%= f.select(:looking_for, ["Looking to hire", "looking to get hired", "Looking for a happy time"]) %>
+    </div>
+
+    <div class="actions">
+    <%= f.submit "Let's do this!" %>
+    </div>
+  <% end %>
+
 </div>
