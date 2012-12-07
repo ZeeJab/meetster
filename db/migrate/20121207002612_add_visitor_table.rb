@@ -1,7 +1,19 @@
 class AddVisitorTable < ActiveRecord::Migration
-  def up
-  end
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :description
+      t.string :looking_for
+      t.text :photo
+      t.boolean :user_type
 
-  def down
+      t.timestamps
+    end
+
+    create_table :events do |t|
+      t.string :name
+
+      t.timestamps
+    end
   end
 end
