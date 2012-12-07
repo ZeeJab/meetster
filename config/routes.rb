@@ -4,6 +4,9 @@ Meetster::Application.routes.draw do
   match '/login' => 'session#new', :via => :get
   match '/login' => 'session#create', :via => :post
   match '/logout' => 'session#destroy', :via => :get
+  match '/new_event' => 'events#new', :via => :get
+  match '/new_event' => 'events#create', :via => :post
+  match '/event' => 'events#show', :via => :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
