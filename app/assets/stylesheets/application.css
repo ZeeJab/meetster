@@ -13,18 +13,16 @@
  */
 
  body {
-  background: #E9F1DF;
+  background: url('subtle_carbon.png');
  }
 
  header {
   background: #4AD9D9;
  }
 
-
-
  footer {
   background: #4AD9D9;
-  height: 100px;
+  height: 75px;
  }
 
  footer img {
@@ -34,14 +32,27 @@
  }
 
  #main {
-  height: 600px;
+    width: 960px;
+    margin: auto;
  }
 
  #booth {
   width: 500px;
   height: 300px;
   margin: auto;
-  padding: 20px 0;
+  padding: 10px 0;
+  border: 1px #4AD9D9 solid;
+  border-radius: 5px;
+
+ }
+
+ #logo {
+  height: 260px;
+  width: 300px;
+  background: url('logo-03.png') no-repeat;
+  background-size: 80%;
+  padding-bottom: -30px;
+  margin: auto;
  }
 
 /* Clear fix hack */
