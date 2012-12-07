@@ -28,8 +28,8 @@
       </div>
 
       <div class="field">
-        <%= f.label :looking_for %>
-        <%= f.select(:looking_for, ["Looking to hire", "Looking to get hired", "Looking for a happy time"]) %>
+        <%= f.label :looking_for, "Why are you here?" %>
+        <%= f.select(:looking_for, [["Looking to hire", "Looking to hire"], ["Looking to get hired", "Looking to get hired"], ["Looking for a happy time", "Looking for a happy time"], ["Looking to Collaborate", "Looking to Collaborate"]]) %>
       </div>
 
       <div class="field bottom">
