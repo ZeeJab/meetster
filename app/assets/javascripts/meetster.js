@@ -10,8 +10,6 @@ function takePhoto () {
 }
 
 function sendPhoto(event, dataURL) {
-  console.log($('input#name').val());
-  console.log($('input#description').val());
   $.ajax({
   type: "POST",
   url: "/users",
